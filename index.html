@@ -1,1 +1,59 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Matías Fontana | Portfolio</title>
+  <style>
+    body { font-family: system-ui, Arial; margin: 0; background:#0b1220; color:#e6eefc; }
+    header, main { max-width: 900px; margin: 0 auto; padding: 24px; }
+    .card { background:#111b33; border:1px solid #22335e; border-radius:14px; padding:16px; margin: 14px 0; }
+    a { color:#7cc4ff; text-decoration: none; }
+    .grid { display:grid; gap:14px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+    .tag { display:inline-block; padding:4px 10px; border:1px solid #22335e; border-radius:999px; margin:4px 6px 0 0; font-size: 12px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Matías Fontana</h1>
+    <p>Desarrollador/a • Argentina • <a href="https://github.com/fontamatias">github.com/fontamatias</a></p>
+    <div>
+      <span class="tag">JavaScript</span>
+      <span class="tag">React</span>
+      <span class="tag">Node</span>
+    </div>
+  </header>
 
+  <main>
+    <section class="card">
+      <h2>Sobre mí</h2>
+      <p>Escribí acá un resumen corto (qué buscás, en qué sos fuerte, qué te interesa).</p>
+    </section>
+
+    <section class="card">
+      <h2>Proyectos</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Proyecto 1</h3>
+          <p>Qué hace, stack, qué resolviste.</p>
+          <p><a href="#">Demo</a> · <a href="#">Código</a></p>
+        </article>
+
+        <article class="card">
+          <h3>Proyecto 2</h3>
+          <p>Qué hace, stack, qué resolviste.</p>
+          <p><a href="#">Demo</a> · <a href="#">Código</a></p>
+        </article>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Contacto</h2>
+      <p>
+        Email: tu-mail@dominio.com<br/>
+        LinkedIn: <a href="#">tu-link</a>
+      </p>
+    </section>
+  </main>
+</body>
+</html>

@@ -57,14 +57,16 @@
   const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   if (!prefersReduced) {
-    const revealObserver = new IntersectionObserver((entries) => {
+    // 12% of the element visible is enough to trigger the reveal animation
+  const REVEAL_THRESHOLD = 0.12;
+  const revealObserver = new IntersectionObserver((entries) => {
       entries.forEach(e => {
         if (e.isIntersecting) {
           e.target.classList.add('visible');
           revealObserver.unobserve(e.target);
         }
       });
-    }, { threshold: 0.12 });
+    }, { threshold: REVEAL_THRESHOLD });
 
     document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
   } else {
@@ -304,7 +306,7 @@
               obs.unobserve(e.target);
             }
           });
-        }, { threshold: 0.12 });
+        }, { threshold: REVEAL_THRESHOLD });
         obs.observe(el);
       }
     });
